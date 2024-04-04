@@ -1,0 +1,6 @@
+package com.java.core.day1session1;
+
+public class Book {
+	private String book_title;
+	private int book_price;
+}

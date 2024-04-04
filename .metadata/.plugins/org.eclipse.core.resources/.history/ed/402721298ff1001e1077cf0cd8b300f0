@@ -1,0 +1,9 @@
+package com.java.core.day1session1;
+
+public class BookImplementation {
+	public void createBooks() {
+		Book b=new Book();
+		b.setBook_price(350.00);
+		b.setBook_title("Java programming");
+	}
+}

@@ -1,0 +1,12 @@
+package com.java.core.day1session1;
+
+public class D01P01 { 
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		BookImplementation bi=new BookImplementation();
+		bi.createBooks("Java Programming",350.00);
+		bi.showBooks();
+	}
+}

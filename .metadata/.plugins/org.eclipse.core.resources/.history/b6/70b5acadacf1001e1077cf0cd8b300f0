@@ -1,0 +1,53 @@
+package com.java.core.day1session1;
+import java.util.Scanner;
+
+public class D01P03_B {
+	    public static void main(String[] args) {
+	        Scanner scanner = new Scanner(System.in);
+	        
+	        // Prompt the user to enter three numbers between 1 to 12
+	        int[] monthNumbers = new int[3];
+	        
+	        // Get input from the user
+	        for (int i = 0; i < 3; i++) {
+	            int num = scanner.nextInt();
+	            
+	            // Validate input range
+	            if (num < 1 || num > 12) {
+	                System.out.println("Invalid Input");
+	                i--;
+	                continue;
+	            }
+	            
+	            // Store valid input
+	            monthNumbers[i] = num;
+	        }
+	        
+	        // Display the names of the months corresponding to the numbers
+	        for (int i = 0; i < 3; i++) {
+	            String monthName = getMonthName(monthNumbers[i]);
+	            System.out.println(monthName);
+	        }
+	        
+	        scanner.close();
+	    }
+	    
+	    // Method to get the name of the month based on the number
+	    public static String getMonthName(int monthNumber) {
+	        switch (monthNumber) {
+	            case 1:  return "January";
+	            case 2:  return "February";
+	            case 3:  return "March";
+	            case 4:  return "April";
+	            case 5:  return "May";
+	            case 6:  return "June";
+	            case 7:  return "July";
+	            case 8:  return "August";
+	            case 9:  return "September";
+	            case 10: return "October";
+	            case 11: return "November";
+	            case 12: return "December";
+	            default: return "Invalid month number";
+	        }
+	    }
+}

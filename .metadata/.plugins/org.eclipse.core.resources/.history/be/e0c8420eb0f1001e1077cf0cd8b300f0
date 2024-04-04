@@ -1,0 +1,32 @@
+package com.java.core.day1session1;
+
+import java.util.Scanner;
+
+public class D01P03_C {
+    public static void main(String[] args) {
+	        Scanner scanner = new Scanner(System.in);
+
+	        // Prompt the user to enter the percentage marks
+	        System.out.print("Enter the percentage marks: ");
+	        double percentage = scanner.nextDouble();
+
+	        // Check the grade based on the percentage marks
+	        String grade = getGrade(percentage);
+	        System.out.println("Grade: " + grade);
+
+	        scanner.close();
+	    }
+
+	    // Method to check the grade based on the percentage marks
+	    public static String getGrade(double percentage) {
+	        if (percentage >= 60) {
+	            return "A Grade";
+	        } else if (percentage >= 45) {
+	            return "B Grade";
+	        } else if (percentage > 35) {
+	            return "C Grade";
+	        } else {
+	            return "Fail";
+	        }
+	    }
+	}
